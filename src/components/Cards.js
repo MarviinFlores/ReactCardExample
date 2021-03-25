@@ -9,17 +9,20 @@ const cards = [
   {
     id:1,
     title: "GM WebSite",
-    image: image1
+    image: image1,
+    url:'http://youtube.com'
   },
   {
     id:2,
     title : 'GM Service',
     image : image2,
+    url: 'http://twitter.com/marvinfloresjr'
   },
   {
     id:3,
     title:'GM VIP',
     image : image3,
+    url: 'http://facebook.com/iglesiacuadrangulardeanton'
   }
 ]
 
@@ -32,7 +35,7 @@ function Cards() {
 
                 {cards.map(card =>(
                   <div className ="col-md-4" key={card.id}>
-                    <Card/>
+                    <Card title ={card.title} imageSource= {card.image} url={card.url}/>
                   </div>
                 ))}
 
